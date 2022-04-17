@@ -1,0 +1,24 @@
+@tailwind components;
+
+@layer components {
+    .navbar__container {
+        @apply fixed top-0 w-full h-[80px] bg-[#E8FCF2] z-10;
+    }
+
+    .navbar {
+        @apply w-[80%] mx-auto flex items-center justify-between py-5;
+    }
+
+    .navbar__logo a {
+        @apply text-3xl font-extrabold text-emerald-400;
+        font-family: Iceland;
+    }
+
+    .nav-link {
+        @apply inline-block px-5 font-medium text-slate-600 hover:text-emerald-500 duration-300;
+    }
+
+    .nav-link .active {
+        @apply text-emerald-500;
+    }
+}

@@ -1,0 +1,62 @@
+@tailwind components;
+
+@layer components {
+    .footer {
+        @apply absolute bottom-0 w-full h-[300px];
+        background: linear-gradient(
+                to top right,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.4)
+            ),
+            url("https://i.ibb.co/HYL5BRG/footer-2.jpg") no-repeat center bottom;
+        background-size: cover;
+    }
+
+    .footer__container {
+        @apply w-[80%] mx-auto text-white;
+    }
+
+    .footer__content {
+        @apply flex items-center pt-14 pb-5;
+    }
+
+    .footer__content__left {
+        @apply flex-[50%] space-y-5;
+    }
+
+    .footer__content__right {
+        @apply flex-[50%] pl-40 space-y-4;
+    }
+
+    .footer__content__left h1 {
+        @apply text-4xl font-iceland font-extrabold text-emerald-400;
+    }
+
+    .footer__content__left p {
+        @apply w-[85%] font-light;
+    }
+
+    .footer__content__left a {
+        @apply inline-block;
+    }
+
+    .footer__content__left i {
+        @apply mr-3 text-3xl cursor-pointer hover:text-emerald-400 duration-300;
+    }
+
+    .footer__content__right div {
+        @apply flex items-center space-x-4;
+    }
+
+    .footer__content__right div > i {
+        @apply p-2 bg-emerald-500 rounded-full cursor-pointer;
+    }
+
+    .footer__content__right div:nth-child(3) > i {
+        @apply py-2 px-[10px] bg-emerald-500 rounded-full;
+    }
+
+    .footer__copyright {
+        @apply text-center text-sm py-5;
+    }
+}

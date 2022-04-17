@@ -1,0 +1,62 @@
+@tailwind components;
+
+@layer components {
+    .account {
+        @apply min-h-[calc(100vh-380px)] flex items-center justify-center bg-[#ecf0f3] p-20;
+    }
+
+    .account__container {
+        @apply w-[450px] text-center p-5 rounded-xl;
+        box-shadow: 13px 13px 25px #cbced1, -13px -13px 25px #fff;
+    }
+
+    .account__header h1 {
+        @apply text-3xl font-bold font-iceland text-slate-700 mb-5;
+    }
+
+    .account__header h1 span {
+        @apply text-emerald-400 font-iceland;
+    }
+
+    .account__input-group {
+        @apply w-[320px] h-10 mx-auto flex items-center mb-4 py-2 px-5 rounded-md;
+        box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    }
+
+    .account__input-group i {
+        @apply text-gray-600 mr-4;
+    }
+
+    .account__input-group input {
+        @apply w-full bg-transparent outline-none text-sm tracking-wider;
+    }
+
+    .account__form .btn-login {
+        @apply bg-emerald-400 text-xl font-iceland uppercase font-extrabold text-white px-5 py-2 rounded-md shadow-xl shadow-emerald-400/30;
+    }
+
+    .btn-google {
+        @apply mx-auto flex items-center space-x-1 mt-1 px-4 py-2 rounded-full;
+        box-shadow: 8px 8px 15px #cbced1, -8px -8px 15px #fff;
+    }
+
+    .account__container > p {
+        @apply mt-2 font-medium;
+    }
+
+    .btn-google span {
+        @apply text-xl text-gray-600 font-semibold;
+    }
+
+    .create__account {
+        @apply mt-4;
+    }
+
+    .create__account p {
+        @apply text-sm;
+    }
+
+    .create__account p button {
+        @apply underline text-emerald-500 font-bold text-base;
+    }
+}

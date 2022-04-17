@@ -1,0 +1,24 @@
+@tailwind components;
+
+@layer components {
+    .header {
+        @apply w-[80%] mx-auto flex items-center justify-between pt-10;
+    }
+
+    .header__text h1 {
+        @apply text-6xl font-bold tracking-tight text-slate-600;
+    }
+
+    .header__text h1 p,
+    .header__text h1 span {
+        @apply font-iceland;
+    }
+
+    .header__text h1 span {
+        @apply text-emerald-400;
+    }
+
+    .header__text a {
+        @apply px-6 py-2 border-2 border-emerald-400 inline-block mt-7 rounded-lg text-emerald-400 font-semibold hover:bg-emerald-400 hover:text-white duration-300 hover:shadow-xl hover:shadow-emerald-400/30;
+    }
+}

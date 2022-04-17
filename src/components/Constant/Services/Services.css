@@ -1,0 +1,44 @@
+@tailwind components;
+
+@layer components {
+    .services {
+        @apply w-[70%] mx-auto pt-10 pb-20;
+    }
+
+    .services > h1 {
+        @apply text-center text-4xl font-extrabold mb-10 text-emerald-500;
+    }
+
+    .services__container {
+        @apply grid grid-cols-3 gap-x-5;
+    }
+
+    .services__item {
+        @apply rounded-lg overflow-hidden bg-slate-100;
+        box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.2);
+    }
+
+    .services__item-content {
+        @apply p-5;
+    }
+
+    .services__item-content h2 {
+        @apply text-2xl font-semibold mb-2 text-slate-600;
+    }
+
+    .services__item-content p {
+        @apply text-[15px] leading-7 font-light mb-2 tracking-tight text-justify;
+    }
+
+    .services__item-content h3 {
+        @apply text-lg mb-4 font-medium;
+    }
+
+    .services__item-content h3 span {
+        @apply text-yellow-500 font-semibold;
+    }
+
+    .services__item-content a {
+        @apply inline-block px-3 py-2 rounded-md border-2 text-sm font-semibold text-emerald-500 border-emerald-500 hover:text-white hover:bg-emerald-500 hover:shadow-lg hover:shadow-emerald-500/30 duration-300;
+    }
+}
