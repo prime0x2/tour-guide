@@ -8,7 +8,7 @@ import AccountPage from './pages/AccountPage/AccountPage';
 import BlogPage from './pages/BlogPage/BlogPage';
 import Home from './pages/Home/Home';
 import useAuth from './hooks/useAuth';
-import Spinner from './components/Shared/Spinner/Spinner';
+import AboutPage from './pages/AboutPage/AboutPage';
 
 
 const App = () => {
@@ -28,6 +28,7 @@ const App = () => {
                     )
                 }
                 <Route path="/blogs" element={<BlogPage />} />
+                <Route path="/about" element={<AboutPage />} />
                 <Route path="/package/:id" element={<PrivateRoute><Package /></PrivateRoute>} />
             </Routes>
             <Footer />

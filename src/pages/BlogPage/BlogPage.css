@@ -1,0 +1,19 @@
+@tailwind components;
+
+@layer components {
+    .question__container {
+        @apply w-[70%] mx-auto py-16 space-y-5;
+    }
+
+    .question {
+        @apply p-4 rounded-lg open:bg-white open:shadow-lg;
+    }
+
+    .question__summary {
+        @apply leading-6 font-semibold text-emerald-500 marker:text-slate-600;
+    }
+
+    .question__answer {
+        @apply text-gray-600 text-sm leading-6 tracking-wide;
+    }
+}

@@ -7,6 +7,7 @@ import {
     signInWithPopup,
     GoogleAuthProvider,
     onAuthStateChanged,
+    sendEmailVerification,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword
 } from "firebase/auth";
@@ -53,8 +54,8 @@ const useFirebase = () => {
 
         return (
             createUserWithEmailAndPassword(auth, email, password)
-                .then(() => {
-                    setUser(null);
+                .then((result) => {
+                    sendEmailVerification(auth, result.user);
                     updateProfile(auth.currentUser, { displayName: name })
                         .catch((error) => {
                             setError(error.message);

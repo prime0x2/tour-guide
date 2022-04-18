@@ -1,0 +1,40 @@
+@tailwind components;
+
+@layer components {
+    .about {
+        @apply bg-[#ecf0f3] min-h-[calc(100vh-380px)] flex items-center justify-center;
+    }
+
+    .about__container {
+        @apply w-[70%] mx-auto py-16 flex space-x-20;
+    }
+
+    .about__left {
+        @apply flex flex-col items-end justify-center;
+    }
+
+    .about__left h1 {
+        @apply text-5xl font-bold font-iceland text-emerald-400 mt-3;
+    }
+
+    .about__left span {
+        @apply text-right block text-sm mt-2 font-medium text-slate-600;
+    }
+
+    .about__cover {
+        @apply w-[300px] border-4 border-emerald-400/70 rounded-full;
+        box-shadow: 13px 13px 25px #cbced1, -13px -13px 25px #fff;
+    }
+
+    .about__cover img {
+        @apply rounded-full;
+    }
+
+    .about__right p {
+        @apply first-letter:text-5xl first-letter:font-semibold font-iceland text-2xl text-justify text-slate-600;
+    }
+
+    .about__right p span {
+        @apply font-iceland text-emerald-500 font-semibold;
+    }
+}
