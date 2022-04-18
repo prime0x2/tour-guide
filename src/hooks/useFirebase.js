@@ -118,10 +118,10 @@ const useFirebase = () => {
         const observe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                console.log(user);
             } else {
                 setUser(null);
             }
+            setLoading(false);
         });
 
         return () => {
@@ -130,10 +130,25 @@ const useFirebase = () => {
     }, [auth]);
 
 
+    /*----------------- Some Custom Error Message----------------- */
+
+    useEffect(() => {
+        if (error === "Firebase: Error (auth/user-not-found).") {
+            setError("There is no account with this Email");
+        }
+        if (error === "Firebase: Error (auth/email-already-in-use).") {
+            setError("This email already have an account.");
+        }
+        if (error === "Firebase: Error (auth/wrong-password).") {
+            setError("You have entered wrong Password.");
+        }
+    }, [error]);
+
 
     return {
         user,
         error,
+        setError,
         loading,
         googleLogin,
         registerNewUser,

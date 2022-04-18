@@ -59,4 +59,8 @@
     .create__account p button {
         @apply underline text-emerald-500 font-bold text-base;
     }
+
+    .account__error {
+        @apply pb-3 text-sm text-red-600 font-semibold;
+    }
 }

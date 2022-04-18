@@ -1,0 +1,56 @@
+@tailwind components;
+
+@layer components {
+    .package__container {
+        @apply w-[70%] mx-auto flex justify-between py-20;
+    }
+
+    .package__details,
+    .package__form {
+        @apply w-1/2;
+    }
+
+    .package__details__image {
+        @apply rounded-t-xl overflow-hidden;
+    }
+
+    .package__details__info {
+        @apply p-5;
+    }
+
+    .package__details__info h1 {
+        @apply text-3xl font-bold text-slate-600 mb-3;
+    }
+
+    .package__details__info p {
+        @apply tracking-wide text-gray-600 mb-3;
+    }
+
+    .package__details__info h2 {
+        @apply text-xl font-bold text-slate-600;
+    }
+
+    .package__details__info h2 span {
+        @apply font-semibold text-yellow-500;
+    }
+
+    .package__form {
+        @apply text-center;
+    }
+
+    .package__form h1 {
+        @apply text-3xl font-bold text-slate-600 mb-10;
+    }
+
+    .package__form form {
+        @apply w-[350px] mx-auto flex flex-col items-center justify-center;
+    }
+
+    .package__form form input {
+        @apply w-full text-sm font-medium text-gray-600 mb-4 px-4 py-2 border-2 border-gray-400/60 focus:border-emerald-500 outline-none rounded-md duration-300;
+    }
+
+    .package__form form input:last-child {
+        @apply w-40 mt-5 border-emerald-400 bg-emerald-400 text-white shadow-lg shadow-emerald-400/40 cursor-pointer;
+    }
+}

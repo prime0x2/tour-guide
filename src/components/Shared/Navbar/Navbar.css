@@ -21,4 +21,8 @@
     .nav-link .active {
         @apply text-emerald-500;
     }
+
+    .btn-logout {
+        @apply text-slate-600 font-medium hover:text-emerald-500 duration-300;
+    }
 }

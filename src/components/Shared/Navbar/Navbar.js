@@ -1,8 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Navbar.css'
 
 const Navbar = () => {
+
+    const { user, logOut } = useAuth();
+
+    const handleLogOut = () => {
+        logOut()
+    }
+
     return (
         <div className="navbar__container">
             <nav className="navbar">
@@ -21,9 +29,21 @@ const Navbar = () => {
                         <li className="nav-link">
                             <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/about">About</NavLink>
                         </li>
-                        <li className="nav-link">
-                            <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/account">Account</NavLink>
-                        </li>
+                        {
+                            user ? (
+                                <>
+                                    <li className="nav-link">
+                                        <button className="btn-logout" onClick={handleLogOut}>
+                                            Log Out
+                                        </button>
+                                    </li>
+                                </>
+                            ) : (
+                                <li className="nav-link">
+                                    <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/account">Account</NavLink>
+                                </li>
+                            )
+                        }
                     </ul>
                 </div>
             </nav>

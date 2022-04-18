@@ -20,29 +20,3 @@ export const blogs = [
         description: "Pula is fun, vibrant and historical. It has a bit of everything that Croatia is famous for – all packed in one destination. Situated on the lower tip of the Istrian Peninsula, Pula is a coastal town with an abundance of distinctive rocky beaches. It is more than just a beach destination, it has a LOT of history too. There is so much more to this charming, medieval town that makes it worth the visit and the perfect destination for you to start or end your adventures in Croatia."
     }
 ]
-
-
-
-export const packages = [
-    {
-        id: "1",
-        name: "Silver",
-        price: "100",
-        description: "This package will save some money for you. I will suggest you some places to visit in the city. You can also choose to visit some places that you like. I will guide you afterwards",
-        img: "https://i.ibb.co/Yp53C68/1.jpg"
-    },
-    {
-        id: "2",
-        name: "Gold",
-        price: "200",
-        description: "This package will cost you a little bit more. I personally think you should choose this package. I will send a guide with you to show places that you like.",
-        img: "https://i.ibb.co/1dSfTRx/2.jpg"
-    },
-    {
-        id: "3",
-        name: "Platinum",
-        price: "300",
-        description: "This is the ultimate package you have ever wanted. You will be benefited with literally everything you want. In addition you will get discounts on hotel bookings",
-        img: "https://i.ibb.co/qnzPpN9/3.jpg"
-    }
-]
