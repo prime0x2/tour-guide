@@ -8,6 +8,7 @@ import {
     GoogleAuthProvider,
     onAuthStateChanged,
     sendEmailVerification,
+    sendPasswordResetEmail,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword
 } from "firebase/auth";
@@ -55,10 +56,13 @@ const useFirebase = () => {
         return (
             createUserWithEmailAndPassword(auth, email, password)
                 .then((result) => {
-                    sendEmailVerification(auth, result.user);
                     updateProfile(auth.currentUser, { displayName: name })
                         .catch((error) => {
                             setError(error.message);
+                        });
+                    sendEmailVerification(auth.currentUser)
+                        .catch((error) => {
+                            console.log(error.message);
                         });
                     logOut();
                 })
@@ -88,6 +92,25 @@ const useFirebase = () => {
                 })
         );
     }
+
+
+    /* ------------- Send Password Reset Email ------------- */
+
+    const resetPassword = (email) => {
+        setLoading(true);
+        setError("");
+
+        return (
+            sendPasswordResetEmail(auth, email)
+                .catch((error) => {
+                    setError(error.message);
+                })
+                .finally(() => {
+                    setLoading(false);
+                })
+        )
+    }
+
 
 
     /* ---------------- Sign Out / Log Out ---------------- */
@@ -152,6 +175,7 @@ const useFirebase = () => {
         setError,
         loading,
         googleLogin,
+        resetPassword,
         registerNewUser,
         loginEmailPass,
         logOut

@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+    .error__container img {
+        @apply mx-auto;
+    }
+}

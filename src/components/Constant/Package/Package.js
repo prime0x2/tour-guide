@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { useForm } from 'react-hook-form';
 import Spinner from '../../Shared/Spinner/Spinner';
 import './Package.css'
@@ -7,9 +7,10 @@ import useAuth from '../../../hooks/useAuth';
 
 const Package = () => {
 
-    const { user } = useAuth();
 
     const { id } = useParams();
+    const navigate = useNavigate();
+    const { user } = useAuth();
     const [loading, setLoading] = useState(true);
     const [packageData, setPackageData] = useState(null);
 
@@ -33,8 +34,8 @@ const Package = () => {
 
     const onsubmit = (data) => {
         reset();
-        alert('Thank For The Booking');
         console.log(data);
+        navigate(`/checkout/${id}`);
     }
 
 

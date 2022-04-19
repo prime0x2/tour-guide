@@ -17,6 +17,6 @@
     }
 
     .page {
-        @apply relative pt-[80px] pb-[300px];
+        @apply relative pt-[80px] pb-[300px] mobile:pb-[490px];
     }
 }

@@ -2,7 +2,7 @@
 
 @layer components {
     .footer {
-        @apply absolute bottom-0 w-full h-[300px];
+        @apply absolute bottom-0 w-full h-[300px] mobile:h-[490px];
         background: linear-gradient(
                 to top right,
                 rgba(0, 0, 0, 0.7),
@@ -13,19 +13,19 @@
     }
 
     .footer__container {
-        @apply w-[80%] mx-auto text-white;
+        @apply w-[80%] mobile:w-full mx-auto text-white;
     }
 
     .footer__content {
-        @apply flex items-center pt-14 pb-5;
+        @apply flex mobile:flex-col items-center pt-14 pb-5;
     }
 
     .footer__content__left {
-        @apply flex-[50%] space-y-5;
+        @apply flex-[50%] space-y-5 mobile:text-center mobile:mb-10;
     }
 
     .footer__content__right {
-        @apply flex-[50%] pl-40 space-y-4;
+        @apply flex-[50%] pl-40 space-y-4 mobile:pl-0;
     }
 
     .footer__content__left h1 {
@@ -33,7 +33,7 @@
     }
 
     .footer__content__left p {
-        @apply w-[85%] font-light;
+        @apply w-[85%] font-light mobile:w-[90%] mobile:mx-auto;
     }
 
     .footer__content__left a {
@@ -57,6 +57,6 @@
     }
 
     .footer__copyright {
-        @apply text-center text-sm py-5;
+        @apply text-center text-sm mobile:text-xs py-5;
     }
 }

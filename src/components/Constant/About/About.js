@@ -9,8 +9,8 @@ const About = () => {
                     <div className="about__cover">
                         <img src="https://i.ibb.co/JBx7mc8/turag.jpg" alt="" />
                     </div>
-                    <h1>Shahriar Turag</h1>
-                    <span>Jr. Web Developer</span>
+                    <h1 data-aos="fade-right" data-aos-duration="1000">Shahriar Turag</h1>
+                    <span data-aos="fade-right" data-aos-duration="1500">Jr. Web Developer</span>
                 </div>
 
                 <div className="about__right">

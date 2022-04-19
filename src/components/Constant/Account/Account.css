@@ -2,11 +2,11 @@
 
 @layer components {
     .account {
-        @apply min-h-[calc(100vh-380px)] flex items-center justify-center bg-[#ecf0f3] p-20;
+        @apply min-h-[calc(100vh-380px)] flex items-center justify-center bg-[#ecf0f3] p-20 mobile:px-0 mobile:py-10;
     }
 
     .account__container {
-        @apply w-[450px] text-center p-5 rounded-xl;
+        @apply w-[450px] mobile:w-[90%] text-center p-5 rounded-xl;
         box-shadow: 13px 13px 25px #cbced1, -13px -13px 25px #fff;
     }
 
@@ -19,7 +19,7 @@
     }
 
     .account__input-group {
-        @apply w-[320px] h-10 mx-auto flex items-center mb-4 py-2 px-5 rounded-md;
+        @apply w-[320px] mobile:w-[100%] h-10 mx-auto flex items-center mb-4 py-2 px-5 rounded-md;
         box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
     }
 
@@ -53,11 +53,15 @@
     }
 
     .create__account p {
-        @apply text-sm;
+        @apply text-sm mb-2;
     }
 
     .create__account p button {
-        @apply underline text-emerald-500 font-bold text-base;
+        @apply text-emerald-500 font-bold text-base;
+    }
+
+    .create__account p:last-child button {
+        @apply font-medium text-sm underline decoration-emerald-500 text-slate-600;
     }
 
     .account__error {

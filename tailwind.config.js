@@ -6,6 +6,11 @@ module.exports = {
     extend: {},
     fontFamily: {
       'iceland': 'Iceland',
+    },
+    screens: {
+      'mobile': {
+        'max': "480px",
+      }
     }
   },
   plugins: [],

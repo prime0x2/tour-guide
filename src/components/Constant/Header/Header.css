@@ -2,11 +2,11 @@
 
 @layer components {
     .header {
-        @apply w-[80%] mx-auto flex items-center justify-between pt-10;
+        @apply w-[80%] mobile:w-[90%] mx-auto flex mobile:flex-col items-center justify-between pt-10;
     }
 
     .header__text h1 {
-        @apply text-6xl font-bold tracking-tight text-slate-600;
+        @apply text-6xl mobile:text-3xl font-bold tracking-tight text-slate-600;
     }
 
     .header__text h1 p,

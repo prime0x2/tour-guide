@@ -10,24 +10,24 @@ const Footer = () => {
             <div className="footer__container">
                 <div className="footer__content">
                     <div className="footer__content__left">
-                        <h1>NiGGA</h1>
+                        <h1>Travelcations</h1>
                         <p>
                             A vacation is full of opportunities to see new sights, meet new people, and experience different cultures
                         </p>
                         <a
-                            href="https://www.linkedin.com/company/enginix-tech/"
+                            href="/"
                             target="_blank" rel="noopener noreferrer"
                         >
                             <i className="fa-brands fa-linkedin"></i>
                         </a>
                         <a
-                            href="https://www.facebook.com/enginix.tech"
+                            href="/"
                             target="_blank" rel="noopener noreferrer"
                         >
                             <i className="fa-brands fa-facebook-square"></i>
                         </a>
                         <a
-                            href="https://www.facebook.com/enginix.tech"
+                            href="/"
                             target="_blank" rel="noopener noreferrer"
                         >
                             <i className="fa-brands fa-instagram-square"></i>

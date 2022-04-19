@@ -2,15 +2,15 @@
 
 @layer components {
     .blogs {
-        @apply w-[90%] mx-auto pt-10 pb-20;
+        @apply w-[90%] mobile:w-[70%] mx-auto pt-10 pb-20;
     }
 
     .blogs > h1 {
-        @apply text-4xl text-center mb-10 font-bold text-emerald-500;
+        @apply text-4xl mobile:text-3xl text-center mb-10 font-bold text-emerald-500;
     }
 
     .blogs__container {
-        @apply grid grid-cols-4 gap-8;
+        @apply grid grid-cols-4 mobile:grid-cols-1 gap-8 mobile:gap-y-10;
     }
 
     .blogs__item {
@@ -23,23 +23,15 @@
     }
 
     .blogs__item-content h2 {
-        @apply text-xl font-semibold mb-2 text-slate-600;
+        @apply text-xl mobile:text-lg font-semibold mb-2 text-slate-600;
     }
 
     .blogs__item-content p {
-        @apply text-[15px] leading-7 font-light mb-2 tracking-tight text-justify;
+        @apply text-[15px] mobile:text-sm mobile:leading-[24px] leading-7 font-light mb-2 tracking-tight text-justify;
     }
 
     .blogs__item-content a,
     .blogs__all a {
-        @apply inline-block px-3 py-2 rounded-md border-2 text-sm font-semibold text-emerald-500 border-emerald-500 hover:text-white hover:bg-emerald-500 hover:shadow-lg hover:shadow-emerald-500/30 duration-300;
-    }
-
-    .blogs__all {
-        @apply text-center;
-    }
-
-    .blogs__all a {
-        @apply px-6 text-base mt-10;
+        @apply inline-block px-3 py-2 rounded-md border-2 text-sm font-semibold text-emerald-500 border-emerald-500 hover:text-white hover:bg-emerald-500 hover:shadow-lg hover:shadow-emerald-500/30 duration-300 mobile:px-5;
     }
 }

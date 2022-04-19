@@ -6,12 +6,16 @@
     }
 
     .navbar {
-        @apply w-[80%] mx-auto flex items-center justify-between py-5;
+        @apply mobile:w-[90%] w-[80%] mx-auto flex items-center justify-between py-5;
     }
 
     .navbar__logo a {
         @apply text-3xl font-extrabold text-emerald-400;
         font-family: Iceland;
+    }
+
+    .navbar__links {
+        @apply mobile:hidden;
     }
 
     .nav-link {
@@ -24,5 +28,25 @@
 
     .btn-logout {
         @apply text-slate-600 font-medium hover:text-emerald-500 duration-300;
+    }
+
+    .navbar__toggle {
+        @apply hidden mobile:block;
+    }
+
+    .navbar__toggle > button {
+        @apply text-xl bg-slate-300 text-slate-500 px-2 rounded shadow-md;
+    }
+
+    .toggle__links {
+        @apply relative overflow-hidden text-center bg-[#E8FCF2] h-0 duration-500;
+    }
+
+    .toggle__links .nav-link {
+        @apply block py-2;
+    }
+
+    .toggle__links.active {
+        @apply h-[170px] duration-500;
     }
 }

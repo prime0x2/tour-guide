@@ -6,7 +6,7 @@ import './Blogs.css'
 const Blogs = () => {
     return (
         <section className="blogs">
-            <h1>Featured Blogs</h1>
+            <h1 data-aos="fade-right" data-aos-duration="1000">Featured Blogs</h1>
 
             <div className="blogs__container">
                 {

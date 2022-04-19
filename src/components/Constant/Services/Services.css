@@ -6,11 +6,11 @@
     }
 
     .services > h1 {
-        @apply text-center text-4xl font-extrabold mb-10 text-emerald-500;
+        @apply text-center text-4xl mobile:text-3xl font-extrabold mb-10 text-emerald-500;
     }
 
     .services__container {
-        @apply grid grid-cols-3 gap-x-5;
+        @apply grid grid-cols-3 mobile:grid-cols-1 gap-x-5 mobile:gap-x-0 mobile:gap-y-10;
     }
 
     .services__item {
@@ -23,15 +23,15 @@
     }
 
     .services__item-content h2 {
-        @apply text-2xl font-semibold mb-2 text-slate-600;
+        @apply text-2xl mobile:text-xl font-semibold mb-2 text-slate-600;
     }
 
     .services__item-content p {
-        @apply text-[15px] leading-7 font-light mb-2 tracking-tight text-justify;
+        @apply text-[15px] leading-7 font-light mb-2 tracking-tight text-justify mobile:text-sm;
     }
 
     .services__item-content h3 {
-        @apply text-lg mb-4 font-medium;
+        @apply text-lg mb-4 font-medium mobile:text-base;
     }
 
     .services__item-content h3 span {
@@ -39,6 +39,6 @@
     }
 
     .services__item-content a {
-        @apply inline-block px-3 py-2 rounded-md border-2 text-sm font-semibold text-emerald-500 border-emerald-500 hover:text-white hover:bg-emerald-500 hover:shadow-lg hover:shadow-emerald-500/30 duration-300;
+        @apply inline-block px-3 py-2 rounded-md border-2 text-sm font-semibold text-emerald-500 border-emerald-500 hover:text-white hover:bg-emerald-500 hover:shadow-lg hover:shadow-emerald-500/30 duration-300 mobile:px-5;
     }
 }
